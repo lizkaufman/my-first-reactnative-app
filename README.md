@@ -33,13 +33,13 @@
 - Example: 
     ```js
     <TouchableHighlight onPress={handlePress} onLongPress={handleLongPress}>
-    <Image
-        source={{
-        uri: 'https://picsum.photos/200/300',
-        width: 300,
-        height: 200
-        }}
-    />
+        <Image
+            source={{
+            uri: 'https://picsum.photos/200/300',
+            width: 300,
+            height: 200
+            }}
+        />
     </TouchableHighlight>
     ```
 
