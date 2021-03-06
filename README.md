@@ -114,3 +114,4 @@ const styles = StyleSheet.create({
 ## StatusBar API
 - Import as `StatusBar` from react-native
 - `currentHeight` method detects height of status bar 
+
