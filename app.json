@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DoneWithIt-LK",
-    "slug": "donewithit-lk",
+    "name": "lk-first-reactnative-app",
+    "slug": "lk-first-reactnative-app",
     "platforms": [
       "ios",
       "android",
@@ -24,7 +24,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "A marketplace for selling the stuff you don't need anymore. Tutorial project from Programming with Mosh React Native: https://www.youtube.com/watch?v=0-S5a0eXPoc",
+    "description": "Tutorial project from Programming with Mosh video on React Native: https://www.youtube.com/watch?v=0-S5a0eXPoc",
     "githubUrl": "https://github.com/lizkaufman/my-first-reactnative-app/"
   }
 }
