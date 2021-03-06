@@ -57,6 +57,14 @@
   - `color` <- text color
   - `title` <- text inside the button
   - `onPress` <- event listener
+- Example:
+    ```js
+    <Button
+        color="orange"
+        title="Click Me"
+        onPress={() => {}}
+    />
+    ```
 
 ## Alerts:
 - Alert as a function works similarly to browser - pops up a lil window with your message and then ok to close.
@@ -67,7 +75,7 @@
   - Third argument is array of buttons; each button is an object with its `text`, `style`, and `onPress` event
 - Example with basic alert method: 
     ```js
-    Alert.alert('titleTextHere', 'message', [
+    Alert.alert('titleTextHere', 'messageTextHere', [
             {text: "button text", onPress: ()=>{}}, 
             {text: "other button text",  onPress: ()=>{}}
         ]
