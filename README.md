@@ -1,4 +1,4 @@
-My notes and example code from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/p/the-ultimate-react-native-course-part1?_ga=2.91864024.353588028.1615025430-233404291.1615025430):
+My notes from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/p/the-ultimate-react-native-course-part1?_ga=2.91864024.353588028.1615025430-233404291.1615025430):
 
 - [Fundamental concepts](#fundamental-concepts)
   - [Starting/running](#startingrunning)
