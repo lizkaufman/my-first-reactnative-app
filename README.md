@@ -1,40 +1,40 @@
 My notes and example code from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/p/the-ultimate-react-native-course-part1?_ga=2.91864024.353588028.1615025430-233404291.1615025430):
 
 - [Fundamental concepts](#fundamental-concepts)
-  - [Starting/running:](#startingrunning)
-  - [Views:](#views)
+  - [Starting/running](#startingrunning)
+  - [Views](#views)
   - [Text:](#text)
-  - [Images:](#images)
-  - [Touchables:](#touchables)
-  - [Buttons:](#buttons)
-  - [Alerts:](#alerts)
-  - [StyleSheet:](#stylesheet)
-  - [Platform:](#platform)
-  - [StatusBar API](#statusbar-api)
+  - [Images](#images)
+  - [Touchables](#touchables)
+  - [Buttons](#buttons)
+  - [Alerts](#alerts)
+  - [StyleSheet](#stylesheet)
+  - [Platform](#platform)
+  - [StatusBar AP](#statusbar-ap)
 - [Layout](#layout)
-  - [Dimensions:](#dimensions)
-  - [Detecting orentation changes:](#detecting-orentation-changes)
-  - [Flexbox:](#flexbox)
+  - [Dimensions](#dimensions)
+  - [Detecting orentation changes](#detecting-orentation-changes)
+  - [Flexbox](#flexbox)
 - [Styling](#styling)
-  - [Borders:](#borders)
-  - [Shadows:](#shadows)
-  - [Padding and margins:](#padding-and-margins)
-  - [Styling text:](#styling-text)
+  - [Borders](#borders)
+  - [Shadows](#shadows)
+  - [Padding and margins](#padding-and-margins)
+  - [Styling text](#styling-text)
 
 # Fundamental concepts
 
-## Starting/running:
+## Starting/running
 - TO START PROJECT: expo init AppName <- terminal command to create an app
 - TO RUN PROJECT: /npm start will serve app w/ expo
 - TO DEBUG PROJECT: on phone, shake for dev menu, then hit debug remote JS; opens new tab in chrome, and can use browser console/debugger as normal
 
-## Views:
+## Views
 - `View` = div (for grouping or laying out children)
 - No html elements at all; need to build in react native elements
 - Cross-platform: when compiled, React Native compiles these components into their native components for iOS/Android
 - `SafeAreaView` leaves room for iPhone notch; no effect on Android
 
-## Text: 
+## Text:
 -Essential text component props:
   - `numberOfLines` = max # of lines to display (excess gets truncated w/ ...)
   - `onPress` = event listener; function for what happens when the element is touched
@@ -45,7 +45,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     </Text> 
     ```
 
-## Images:
+## Images
 - Local images: require function w/ path as source, ex: `source={require('./assets/icon.png')}` <- this tells Metro Bundler to include this file w/ our app (increases size of app, so only use static images where necessary!)
 - Network images: source w/ object w/ uri, ex: `source={{uri: 'https://picsum.photos/200/300'}}`
 - for network images, MUST specify dimensions in source obj (width/height) as well as uri before it'll display
@@ -64,7 +64,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     </TouchableHighlight>
     ```
 
-## Touchables:
+## Touchables
 - Touchable components have `onPress` and `onLongPress` events
 - Can wrap around elements that don't have their own onPress (like images)
 - Three cross-platform touchable components (cross-platform):
@@ -72,7 +72,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
   - `TouchableOpacity` (component goes see-thru when touched)
   - `TouchableHighlight` (component goes dark when touched)
 
-## Buttons:
+## Buttons
 - Buttons are self-closing. Text in it is from title prop.
 - Props include:
   - `color` <- text color
@@ -87,7 +87,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     />
     ```
 
-## Alerts:
+## Alerts
 - Alert as a function works similarly to browser - pops up a lil window with your message and then ok to close.
 - Alert as a component is imported with the other components, but it's an object API with methods (but no visible component, so you can't use it like a normal component, like `<Alert />`)
 - Two methods: alert() and prompt()
@@ -110,7 +110,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
         })`
     ```
 
-## StyleSheet:
+## StyleSheet
 - Passed to component using `style` prop; ex: `<SafeAreaView style={styles.container}>`
 - Styles inside are JS, not CSS!
 - Advantages over plain JS object passed to `style` prop:
@@ -129,7 +129,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     ```
 - Can put where `StyleSheet` is called/used in separate file and then export/import
 
-## Platform:
+## Platform
 - Import as `Platform` from react-native
 - Example:
     ```js
@@ -142,13 +142,13 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     });
     ```
 
-## StatusBar API
+## StatusBar AP
 - Import as `StatusBar` from react-native
 - `currentHeight` method detects height of status bar 
 
 # Layout
 
-## Dimensions:
+## Dimensions
 - Physical pixels = DIPs (density-independent pixels) x scale factor of the device <- This is how the app can scale to different screen sizes!
 - Can use percentages just like normal CSS; example:
     ```js
@@ -161,7 +161,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
   - On iPhone, window === screen, but on Android, screen dimensions are slightly smaller
   - Caution: Doesn't respond to orientation changes!!
 
-## Detecting orentation changes:
+## Detecting orentation changes
 - Default orientation of app is `"orientation": "portrait"` (in `app.json`); set to `"orientation": "default"` instead to be able to be used in both portrait and landscape
 - [React Native Hooks](https://github.com/react-native-community/hooks) turns React Native APIs into hooks to use w/in functional components
   - `npm i @react-native-community/hooks`
@@ -179,7 +179,7 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
     }}>
     ```
 
-## Flexbox:
+## Flexbox
 - Not exactly the same as CSS flexbox!
 - `flex` property in style object tells the component how much to grow to take available free space. 
   - Shorthand that combines `flexGrow` and `flexShrink`
@@ -215,22 +215,22 @@ My notes and example code from [CodeWithMosh React Native Fundamentals](https://
 
 # Styling
 
-## Borders:
+## Borders
 - `borderWidth`, `borderColor`, and `borderRadius` properties control thickness, color, and border radius
 - Can split out for specific sides (examples: `borderTopWidth` to thicken just the top border or `borderTopLeftRadius` to round just the top left corner)
 - To make a circle, use a border radius half the size of the box
 
-## Shadows:
+## Shadows
 - `shadowColor` sets color
 - `shadowOffset` takes object with width and height (`shadowOffset: {width: 10, height: 10}`)
 - `shadowOpacity` takes a number between zero and one; 0===no shadow and 1===completely dark
 - `elevation`
 - Customisations only work on iOS (on Android, something either has a shadow or doesn't, and that's it, or you can change the elevation, but you can't change the color, etc.)
 
-## Padding and margins:
+## Padding and margins
 - `padding`, `paddingLeft`, `paddingTop`, etc. work like in CSS
 - Can also use `paddingHorizontal` and `paddingVertical`
 - Equivalent properties w/ margins as well
 
-## Styling text:
+## Styling text
 - 
