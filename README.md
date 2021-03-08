@@ -1,4 +1,25 @@
-# My notes and example code from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/p/the-ultimate-react-native-course-part1?_ga=2.91864024.353588028.1615025430-233404291.1615025430)
+My notes and example code from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/p/the-ultimate-react-native-course-part1?_ga=2.91864024.353588028.1615025430-233404291.1615025430):
+
+- [Fundamental concepts](#fundamental-concepts)
+  - [Starting/running:](#startingrunning)
+  - [Views:](#views)
+  - [Text:](#text)
+  - [Images:](#images)
+  - [Touchables:](#touchables)
+  - [Buttons:](#buttons)
+  - [Alerts:](#alerts)
+  - [StyleSheet:](#stylesheet)
+  - [Platform:](#platform)
+  - [StatusBar API](#statusbar-api)
+- [Layout](#layout)
+  - [Dimensions:](#dimensions)
+  - [Detecting orentation changes:](#detecting-orentation-changes)
+  - [Flexbox:](#flexbox)
+- [Styling](#styling)
+  - [Borders:](#borders)
+  - [Shadows:](#shadows)
+  - [Padding and margins:](#padding-and-margins)
+  - [Styling text:](#styling-text)
 
 # Fundamental concepts
 
@@ -35,9 +56,9 @@
     <TouchableHighlight onPress={handlePress} onLongPress={handleLongPress}>
         <Image
             source={{
-            uri: 'https://picsum.photos/200/300',
-            width: 300,
-            height: 200
+                uri: 'https://picsum.photos/200/300',
+                width: 300,
+                height: 200
             }}
         />
     </TouchableHighlight>
@@ -108,7 +129,7 @@
     ```
 - Can put where `StyleSheet` is called/used in separate file and then export/import
 
-## Platform module:
+## Platform:
 - Import as `Platform` from react-native
 - Example:
     ```js
@@ -192,3 +213,24 @@
   - Same values as w/ CSS (`"center"`, `"flex-start"`, `"flex-end"`, `"space-around"`, `"space-evenly"`, `"space-between"`) 
   - Also can use `"baseline"` value; this means all the items have the same baseline (all the bottom edges will line up)
 
+# Styling
+
+## Borders:
+- `borderWidth`, `borderColor`, and `borderRadius` properties control thickness, color, and border radius
+- Can split out for specific sides (examples: `borderTopWidth` to thicken just the top border or `borderTopLeftRadius` to round just the top left corner)
+- To make a circle, use a border radius half the size of the box
+
+## Shadows:
+- `shadowColor` sets color
+- `shadowOffset` takes object with width and height (`shadowOffset: {width: 10, height: 10}`)
+- `shadowOpacity` takes a number between zero and one; 0===no shadow and 1===completely dark
+- `elevation`
+- Customisations only work on iOS (on Android, something either has a shadow or doesn't, and that's it, or you can change the elevation, but you can't change the color, etc.)
+
+## Padding and margins:
+- `padding`, `paddingLeft`, `paddingTop`, etc. work like in CSS
+- Can also use `paddingHorizontal` and `paddingVertical`
+- Equivalent properties w/ margins as well
+
+## Styling text:
+- 
