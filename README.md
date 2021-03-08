@@ -24,8 +24,8 @@ My notes from [CodeWithMosh React Native Fundamentals](https://codewithmosh.com/
 # Fundamental concepts
 
 ## Starting/running
-- TO START PROJECT: expo init AppName <- terminal command to create an app
-- TO RUN PROJECT: /npm start will serve app w/ expo
+- TO START PROJECT: `expo init AppName` <- terminal command to create an app
+- TO RUN PROJECT: `npm start` will serve app w/ expo
 - TO DEBUG PROJECT: on phone, shake for dev menu, then hit debug remote JS; opens new tab in chrome, and can use browser console/debugger as normal
 
 ## Views
